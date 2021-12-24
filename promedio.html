@@ -9,6 +9,32 @@
 </head>
 <body>
     <h1>Promedio</h1>
+    <br>
+    <span>
+        <a href="./index.html">Regresar</a>
+    </span>
+
+    <br><hr><br>
+    <span>Llene las casillas que considere necesarias</span>
+    <form id='form'>
+
+        <label  for="cantidadInputs">Cantidad de Valores</label>
+        <input id="cantidadInputs" type="number" required>
+
+        <button  type="button" onclick="agregarInputs()">
+            Generar
+        </button>
+
+        <button  type="button" onclick="calcularPromedio()">
+            Calcular Promedio
+        </button>
+
+        <br>
+
+    </form>
+    
+    <script src="./promedio.js"></script>
+    <script src="./promedioForm.js"></script>
     
 </body>
 </html>

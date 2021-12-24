@@ -1,19 +1,30 @@
-let lista = [];
 
-function calcularMediaAritmetica(lista){
+    function calcularPromedio(){
+        let lista = [];
+        let cantidadInputs = document.getElementById('cantidadInputs').value;
+        let cantidad = parseInt(cantidadInputs);
 
-    /* let sumaLista = 0;
+        for(i=0; i<cantidad; i++)
+        {
+            lista.push(parseInt(document.getElementById(`input${i+1}`).value));
+            //console.log(document.getElementById(`input${i+1}`).value));
+        }//for
+        console.log(lista);
+        
+        mediaAritmetica(lista);
 
-    for(let i = 0; i< lista.length; i++){
-        sumaLista = sumaLista + lista[i];
-    }//for */
+    }//calcularPromedio
 
+function mediaAritmetica(lista){
+    console.log(lista);
     const sumaLista = lista.reduce(
         function (valorAcumulado = 0, nuevoElemento){
             return valorAcumulado + nuevoElemento;
         }//funcion valor acumulado
     );
 
-    return promedioLista = sumaLista / lista.length;
+    const promedioLista = sumaLista / lista.length;
 
-}//calcularMediaAritmetica
+    alert(`El promedio total es: ${promedioLista}`);
+
+}//mediaAritmetica
