@@ -11,9 +11,25 @@
         Porcentajes y descuentos
     </h1>
 
-    <script src="./descuentos.js">
+    <br><hr><br>
 
-    </script>
-    
+    <form >
+        <label for="inputPrecio">
+            Precio del Producto
+        </label>
+        <input style="width: 3rem" id="inputPrecio" type="number" required>
+        <br>
+        <br>
+        <label for="inputDescuento">
+            Cuanto es el Descuento
+        </label>
+        <input style="width: 3rem" id="inputDescuento" type="number" required><strong>%</strong>
+
+        <button type="button" onclick="calcularPrecioConDescuento()">
+            Calcular Total a Pagar
+        </button>
+
+    </form>
+    <script src="./descuentos.js"></script>
 </body>
 </html>
