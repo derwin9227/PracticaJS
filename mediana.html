@@ -5,11 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mediana</title>
-    <script src="./mediana.js"></script>
 </head>
 <body>
-
+ 
     <h1>Mediana</h1>
-    
+    <br>
+    <span>
+        <a href="./index.html">Regresar</a>
+    </span>
+
+    <br><hr><br>
+    <span>Llene las casillas que considere necesarias</span>
+    <form>
+        
+        <label  for="cantidadInputs">Cantidad de Valores</label>
+        <input id="cantidadInputs" type="number" required>
+
+        <div id="form"></div>
+
+        <button  type="button" onclick="agregarInputs()">
+            Generar
+        </button>
+
+        <button  type="button" onclick="calcularMediaAritmetica()">
+            Calcular Mediana
+        </button>
+
+        <br>
+
+    </form>
+    <script src="./mediana.js"></script>
+    <script src="./promedioForm.js"></script>
 </body>
 </html>

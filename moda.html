@@ -5,9 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moda</title>
-    <script src="./moda.js"></script>
 </head>
 <body>
-    <h1>Moda</h1>    
+    <h1>Moda</h1>
+
+    <form>
+
+        <label  for="cantidadInputs">Cantidad de Valores</label>
+        <input id="cantidadInputs" type="number" required>
+
+        <div id="form"></div>
+
+        <button  type="button" onclick="agregarInputs()">
+            Generar
+        </button>
+
+        <button  type="button" onclick="calcularPromedio()">
+            Calcular Moda
+        </button>
+
+        <br>
+
+    </form>
+
+    <script src="./moda.js"></script>
+    <script src="./promedioForm.js"></script>
 </body>
 </html>

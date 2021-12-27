@@ -1,30 +1,31 @@
-function calcularMediaAritmetica(lista){
+function extraeValores(){
+    let lista = [];
+    let cantidadInputs = document.getElementById('cantidadInputs').value;
+    let cantidad = parseInt(cantidadInputs);
 
+    for(i=0; i<cantidad; i++)
+    {
+        lista.push(parseInt(document.getElementById(`input${i+1}`).value));
+    }//for
+    
+    return lista;
+
+}//extraeValores
+
+function mediaAritmetica(lista){
     const sumaLista = lista.reduce(
         function (valorAcumulado = 0, nuevoElemento){
             return valorAcumulado + nuevoElemento;
         }//funcion valor acumulado
     );
+    promedioLista = sumaLista / lista.length;
 
-    return promedioLista = sumaLista / lista.length;
+    return promedioLista;
 
 }//calcularMediaAritmetica
 
-/* lista1 = [
-    100,
-    200,
-    500,
-    4000000,
-    'a',
-    'b',
-    'A',
-    'B'
-]; */
-
-const mitadLista1 = parseInt(lista1.length / 2);
-
-function esPar(numerito){
-    if(numerito % 2 === 0){
+function esPar(numero){
+    if(numero % 2 === 0){
         return true;
     }else{
         return false;
@@ -32,25 +33,28 @@ function esPar(numerito){
 
 }//esPar
 
-let mediana;
+function calcularMediaAritmetica(){
+    let mediana;
+    let lista = extraeValores();
+    const mitadLista = parseInt(lista.length / 2);
+    const listaOrdenada = lista.sort((A,B) => {return A-B});
+    alert(listaOrdenada);
 
-if (esPar(lista1.length)){
-    const elemento1 = lista1[mitadLista1 - 1];
-    const elemento2 = lista1[mitadLista1];
+    if (esPar(lista.length)){
+        const elemento1 = lista[mitadLista - 1];
+        const elemento2 = lista[mitadLista];
 
-    const promedioElemento1y2 = calcularMediaAritmetica([
-        elemento1,
-        elemento2,
-    ]);
-    
-    mediana = promedioElemento1y2;
-}else{
-    mediana = lista1[mitadLista1];
-}
+        const promedioElemento1y2 = mediaAritmetica([
+            elemento1,
+            elemento2,
+        ]);
+        
+        mediana = promedioElemento1y2;
 
-//listaOrdenada = 
-/* console.log(
-    lista1.sort(
-        (a,b)=>a - b
-    )
-); */
+        alert(`La mediana tiene un valor de: ${mediana}`);
+    }else{
+        mediana = lista[mitadLista];
+
+        alert(`La mediana tiene un valor de: ${mediana}`);
+    }
+}//calcularMediaAritmetica

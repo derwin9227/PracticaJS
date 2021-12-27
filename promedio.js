@@ -7,9 +7,7 @@
         for(i=0; i<cantidad; i++)
         {
             lista.push(parseInt(document.getElementById(`input${i+1}`).value));
-            //console.log(document.getElementById(`input${i+1}`).value));
         }//for
-        console.log(lista);
         
         mediaAritmetica(lista);
 
