@@ -2,7 +2,6 @@ let click = 0;
 
 function generarInputs(cantidadValores){
     click++;
-    alert(click);
     for(i=0;i<cantidadValores;i++)
     {
         let label = document.createElement("label");
@@ -33,7 +32,7 @@ function agregarInputs(){
 
     generarInputs(cantidad);
 
-    alert(`Se han generado ${cantidad} de campos satisfactoriamente`);
+//    alert(`Se han generado ${cantidad} de campos satisfactoriamente`);
 
 }//agregarInputs
 

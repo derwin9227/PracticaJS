@@ -5,10 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salarios</title>
-    <script src="./salarios.js"></script>
-    <script src="./analisis.js"></script>
 </head>
 <body>
         <h1>Salarios</h1>
+
+        <form>
+        
+            <label  for="cantidadInputs">Cantidad de Personas</label>
+            <input id="cantidadInputs" type="number" required>
+    
+            <div id="form"></div>
+    
+            <button id="boton" type="button" onclick="agregarInputs()">
+                Generar
+            </button>
+    
+            <button  type="button" onclick="">
+                Calcular Salarios
+            </button>
+    
+            <br>
+    
+        </form>
+
+    <script src="./salarios.js"></script>
+    <script src="./analisis.js"></script>
+    <script src="./salariosForm.js"></script>
 </body>
 </html>
+ 
