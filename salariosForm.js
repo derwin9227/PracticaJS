@@ -6,10 +6,10 @@ function generarInputs(cantidadValores){
         let input1 = document.createElement("input");
         let input2 = document.createElement("input");
         input1.setAttribute('type', 'text');
-        input1.setAttribute('id', `nombre${i+1}`);
+        input1.setAttribute('id', `nombre${i}`);
         input1.setAttribute('placeholder', `Ingrese el Nombre ${i+1}`);
         input2.setAttribute('type', 'number');
-        input2.setAttribute('id', `Salario${i+1}`);
+        input2.setAttribute('id', `salario${i}`);
         input2.setAttribute('placeholder', `Ingrese el Salario ${i+1}`);
         
         let spaceBetween = document.createElement("br");
@@ -42,7 +42,7 @@ function agregarInputs(){
     }else{
         resetForm();
         generarInputs(cantidad);
-        document.getElementById('nombre1').focus();
+        document.getElementById('nombre0').focus();
     }
 
 }//agregarInputs

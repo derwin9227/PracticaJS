@@ -1,42 +1,21 @@
-const colombia = [];
+function listaUsuarios(){
+    const colombia = [];
 
-colombia.push({
-    name: "Juanita",
-    salary: 1000,
-});
-colombia.push({
-    name: "Natalia",
-    salary: 1000,
-});
-colombia.push({
-    name: "Mary",
-    salary: 1200,
-}); 
-colombia.push({
-    name: "Juan",
-    salary: 700,
-});
-colombia.push({
-    name: "Pedro",
-    salary: 900,
-});
-colombia.push({
-    name: "Pablo",
-    salary: 750,
-});
-colombia.push({
-    name: "Pedro",
-    salary: 100,
-});
-colombia.push({
-    name: "Pablo",
-    salary: 100,
-});
-colombia.push({
-    name: "Pablo",
-    salary: 100,
-});
-colombia.push({
-    name: "Pablo",
-    salary: 100,
-});
+    let cantidadInputs = document.getElementById('cantidadInputs');
+    let cantidad = parseInt(cantidadInputs.value);
+
+    for(i=0; i<cantidad; i++){
+            let nombre = document.getElementById(`nombre${i}`).value;
+            let salario = parseFloat(document.getElementById(`salario${i}`).value);
+
+            /* nombre = nombre.value;
+            salario = parseFloat(salario.value); */
+        colombia.push({
+            name: nombre,
+            salary: salario
+            });
+        }//for ingreso datos
+
+    return colombia;
+
+}//listaUsuarios
