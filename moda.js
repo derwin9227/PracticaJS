@@ -37,10 +37,25 @@ function orderArray(lista){
 
 function calcularModa(){
     let lista = orderArray(extraeValores());
-    const contarExistentes = contar(lista);
+    let clave=0, valor=0;
+    const contarExistentes = contar(lista).map(x => {
+      if (x[1] >= valor) {
+        clave=x[0];
+        valor = x[1];
+        //console.log('clave: '+x[0]+' valor: '+x[1]);
+      }
+    });
 
-    const moda = contarExistentes[contarExistentes.length - 1];
-    //contar(orderArray(extraeValores())).map(x => console.log("puto "+x));
-    alert('moda '+moda);
+    //const moda = contarExistentes[contarExistentes.length - 1];
+    alert(`el valor promedio es: ${clave} se repite ${valor} veces`);
 }
 
+
+/* let valor=0;
+contar(extraeValores()).map(x => {
+  if (x[1] >= valor) {
+    valor = x[1];
+    console.log('clave: '+x[0]+' valor: '+x[1]);
+  }
+});
+console.log('el valor mayor es: '+valor); */
