@@ -13,23 +13,7 @@ function extraeValores(){
 }//extraeValores
 
 function contar(lista){
-/*     console.log('lista '+lista);
-    let conteo={};
-    lista.map( elemento => {
-        console.log('elemento => '+elemento);
-        console.log('elemento x => '+lista[elemento]);
-            if(conteo[elemento])
-            {
-                conteo[elemento] += 1;
-            }else{
-                conteo[elemento] = 1;
-            }//else
 
-
-        }//function 
-    );
-    console.log('contar '+conteo);
-    return conteo; */
     listaCount={};
     lista.map(
         function (elemento) {
@@ -46,15 +30,17 @@ function contar(lista){
       return listaArray;
 }//contar
 
-/* function ordenarArray(){
-    let listaOrdenada = .sort((elementoA, elementoB) => elementoA - elementoB);
+function orderArray(lista){
+    let listaOrdenada = lista.sort((elementoA, elementoB) => elementoA - elementoB);
     return listaOrdenada
-}//ordenarArray */
+}//ordenarArray
 
 function calcularModa(){
-    let lista = extraeValores();
+    let lista = orderArray(extraeValores());
     const contarExistentes = contar(lista);
+
     const moda = contarExistentes[contarExistentes.length - 1];
+    //contar(orderArray(extraeValores())).map(x => console.log("puto "+x));
     alert('moda '+moda);
 }
 
