@@ -3,38 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Porcentajes y descuentos | Curso practico de javascript</title>
 </head>
-<body>
+<body style=" background: #fcf0f0">
 
-    <h1>
-        Porcentajes y descuentos
-    </h1>
+    <header>
+        <h1 class="text-center">
+            Porcentajes y descuentos
+        </h1>
+
+        <p class="d-block text-center">
+            Segundo taller de platzi - Taller de Descuentos y porcentajes
+        </p>
+    </header>
 
     <br>
-    <span>
-        <a href="./index.html">Regresar</a>
+
+    <span class="mx-2">
+        <a href="./index.html"> Regresar</a>
     </span>
 
-    <br><hr><br>
+    <hr>
 
-    <form >
-        <label for="inputPrecio">
-            Precio del Producto
-        </label>
-        <input style="width: 3rem" id="inputPrecio" type="number" required>
-        <br>
-        <br>
-        <label for="inputDescuento">
-            Cuanto es el Descuento
-        </label>
-        <input style="width: 3rem" id="inputDescuento" type="number" required><strong>%</strong>
+    <div class="px-2 py-1 my-2 mx-3 rounded border border-dark bg-secondary">
+        <form>
+            <table>
+                <tr>
+                    <td class="py-2">
+                        <label for="inputPrecio">
+                            Precio del Producto
+                        </label>
+                    </td>
+                    <td>
+                            <input class="rounded" style="width: 7rem" id="inputPrecio" type="number" required>
+                    </td>
+                </tr>
 
-        <button type="button" onclick="calcularPrecioConDescuento()">
-            Calcular Total a Pagar
-        </button>
+                <tr>
+                    <td class="py-2">
+                        <label for="inputDescuento">
+                            Cuanto es el Descuento
+                        </label>
+                    </td>
+                    <td>
+                            <input class="rounded" style="width: 3rem" id="inputDescuento" type="number" required><strong>%</strong>
+                    </td>
+                </tr>
+            </table>
 
-    </form>
+            <div class="text-center">
+                <button class="my-2 fw-bold btn btn-primary rounded border-light text-dark" type="button" onclick="calcularPrecioConDescuento()">
+                    Calcular Total a Pagar
+                </button>
+            </div>>
+        </form>
+    </div>
     <script src="./descuentos.js"></script>
 </body>
 </html>

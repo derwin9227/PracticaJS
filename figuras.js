@@ -75,7 +75,7 @@ console.groupEnd();
 
         const area = areaCuadrado(value);
 
-        alert(`El perimetro de su cuadrado es: ${area}`);
+        alert(`El area de su cuadrado es: ${area} cm2`);
     }//calcularAreaCuadrado
 
 //Triangulo
